@@ -19,7 +19,7 @@ nltk.download('punkt')
     # pass    
 
 
-with open("intents.json") as file:
+with open("/home/kyle/sideProjects/chatbot/intents.json") as file:
     data = json.load(file)
 
 
