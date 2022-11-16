@@ -2,6 +2,6 @@
 
 case "$1" in 
 run)
-    python3 /home/kyle/sideProjects/chatbot/main.py
+    python3 /home/kyle/sideProjects/chatbot/server.py
     ;;
 esac
