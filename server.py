@@ -1,6 +1,6 @@
 
 from fastapi import FastAPI
-from flask import Flask, jsonify, request,send_file, render_template, make_response
+from flask import Flask, jsonify, request,send_file, render_template, make_response, redirect, url_for
 import bot
 
 # app = FastAPI()
@@ -27,9 +27,16 @@ app = Flask(__name__)
 #     text = bot.ApiChat(name)
 #     return jsonify({"message": text})
 
-@app.route('/<name>')
-def hello_world(name):
-    return render_template('index.html', name=name)
+@app.route('/bot', methods=['POST', 'GET'])
+def hello_world():
+    if request.method == 'POST':
+        txt = request.form['nm']
+
+        bot_said =bot.ApiChat(txt)
+        return render_template('bot.html', name=bot_said)
+
+    else:
+        return render_template('bot.html')
 
 @app.route('/')
 def Index():
