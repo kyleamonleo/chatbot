@@ -25,7 +25,7 @@
          "context_set": ""
         },
         {"tag": "hours",
-         "patterns": ["when are you guys open", "what are your hours", "hours of operation", "how late"],
+         "patterns": ["when are you guys open", "what are your hours", "what time", "hours of operation", "how late"],
          "responses": ["We are open 7am-4pm Monday-Friday!"],
          "context_set": ""
         },
